@@ -26,5 +26,10 @@ if (user) {
 // var form = document.getElementsByTagName("form")[0];
 // form.onsubmit = function (event) {
 //   event.preventDefault();
-//   console.log("ok");
+//   console.log(form.search.value);
+//   var search = form.search.value;
+//   // gui search den server viet bang php de luu vao data base
+
+//   var pro = document.getElementsByTagName("section")[0];
+//   pro.innerHTML = "<h1>" + search + "</h1>";
 // };

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trang chu</title>
+    <title>Chi tiet san pham</title>
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/container.css" />
@@ -76,11 +76,11 @@
     <div class="container">
       <div class="product_detail">
         <div class="img">
-          <img src="./img/giay.jpg" alt="" />
+          <img id="img" src="./img/giay.jpg" alt="" />
         </div>
 
         <div class="info">
-          <h3>Ten san pham</h3>
+          <h3 id="title">Ten san pham</h3>
           <div class="vote">
             <ul>
               <li style="list-style-type: none">
@@ -96,7 +96,7 @@
           </div>
 
           <div class="price">
-            <p>9000 vnd</p>
+            <p id="price">9000 vnd</p>
           </div>
           <div class="dec">
             <p>
@@ -110,7 +110,7 @@
           <div class="buy_number">
             <p>so luong</p>
             <button class="minus">-</button>
-            <input type="number" />
+            <input id="num" type="number" value="1" min="1" />
             <button class="plus">+</button>
             <i>9324 san pham co san</i>
           </div>
@@ -133,4 +133,5 @@
     crossorigin="anonymous"
   ></script>
   <script src="js.js"></script>
+  <script src="./js/product_detail.js"></script>
 </html>

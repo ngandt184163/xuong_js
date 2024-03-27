@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>On tap</title>
+  </head>
+  <body>
+    <p>3</p>
+    <button>click</button>
+    <div></div>
+  </body>
+  <script>
+    var p = document.getElementsByTagName("p")[0];
+    var btn = document.getElementsByTagName("button")[0];
+
+    btn.onclick = function () {
+      var number = Number(p.textContent);
+      number++;
+      p.innerText = number;
+    };
+    // var a = "123";
+    // var b = 123;
+
+    // if (a == b) {
+    //   console.log("a == b");
+    // } else {
+    //   console.log("a!=b");
+    // }
+
+    // if (a === b) {
+    //   console.log("a === b");
+    // } else {
+    //   console.log("a !== b");
+    // }
+
+    // var a = 2;
+    // var b = 3;
+    // b += b; // b= 6
+    // console.log(b);
+    // b = -b; // b = 6;
+    // console.log(b);
+
+    var i = 1;
+
+    // console.log(i++);
+    console.log(++i);
+    var vb = `ertyu`;
+
+    console.log("'\"");
+
+    var pass = "123";
+    // co tu 8 ki tu tro len
+
+    if (pass.length >= 8) {
+      console.log("mk hop le");
+    } else {
+      console.log("mk chua hop le");
+    }
+
+    var ten = "dinh thi ngan";
+    ten = ten.toLocaleUpperCase();
+    console.log(ten);
+
+    var n = true;
+    var m = false;
+
+    var k = 2 > 3;
+    console.log(k);
+
+    var q;
+    console.log("q:" + q);
+    var r = document.getElementById("a");
+    console.log(r);
+
+    var vc = 3;
+
+    vc = 5;
+
+    var rt = [];
+
+    rt[6] = 3;
+  </script>
+
+  <script src="ontap.js"></script>
+</html>
