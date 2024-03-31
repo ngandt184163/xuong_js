@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trang chu</title>
+    <title>Update san pham</title>
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/container.css" />
-    <link rel="stylesheet" href="./css/admin.css" />
+    <link rel="stylesheet" href="./css/add_product.css" />
   </head>
   <body>
     <div class="header">
@@ -74,52 +74,23 @@
     </div>
 
     <div class="container">
-      <div class="add_product">
-        <a href="add_product.html">Them san pham</a>
-      </div>
-      <table border="1">
-        <tr>
-          <td>STT</td>
-          <td>Ten</td>
-          <td>Gia</td>
-          <td>Anh</td>
-          <td>Sua</td>
-          <td>Xoa</td>
-        </tr>
+      <form action="" method="GET" enctype="multipart/form-data">
+        <label for="">Ten san pham</label><br />
+        <input type="text" name="name" /><br />
+        <p class="err_name" style="display: none"></p>
+        <label for="">Gia ban</label><br />
+        <input type="text" name="price" /><br />
+        <p class="err_price" style="display: none"></p>
+        <label for="">hinh anh</label><br />
+        <input type="file" name="img" /><br />
 
-        <!-- <tr>
-          <td>demo text</td>
-          <td>demo text</td>
-          <td>demo text</td>
-          <td>demo text</td>
-          <td><a href="#">Sua</a></td>
-          <td><a href="#">Xoa</a></td>
-        </tr>
-        <tr>
-          <td>demo text</td>
-          <td>demo text</td>
-          <td>demo text</td>
-          <td>demo text</td>
-          <td><a href="#">Sua</a></td>
-          <td><a href="#">Xoa</a></td>
-        </tr>
-        <tr>
-          <td>demo text</td>
-          <td>demo text</td>
-          <td>demo text</td>
-          <td>demo text</td>
-          <td><a href="#">Sua</a></td>
-          <td><a href="#">Xoa</a></td>
-        </tr>
-        <tr>
-          <td>demo text</td>
-          <td>demo text</td>
-          <td>demo text</td>
-          <td>demo text</td>
-          <td><a href="#">Sua</a></td>
-          <td><a href="#">Xoa</a></td>
-        </tr> -->
-      </table>
+        <input
+          style="cursor: pointer"
+          type="submit"
+          name="add_product"
+          value="Them"
+        />
+      </form>
     </div>
 
     <div class="footer">
@@ -131,5 +102,5 @@
     crossorigin="anonymous"
   ></script>
   <script src="js.js"></script>
-  <script src="./js/admin.js"></script>
+  <script src="./js/update_product.js"></script>
 </html>
