@@ -105,3 +105,92 @@ form.onsubmit = function (e) {
 
   list_product.innerHTML = product;
 };
+
+// slide show =============================================
+
+var arr_img = ["./img/slide1.jpg", "./img/slide2.jpg", "./img/slide3.jpg"];
+
+var img = document.getElementById("img_slide");
+var first = document.getElementsByClassName("first")[0];
+var prev = document.getElementsByClassName("prev")[0];
+var stopp = document.getElementsByClassName("stop")[0];
+var start = document.getElementsByClassName("start")[0];
+var next = document.getElementsByClassName("next")[0];
+var last = document.getElementsByClassName("last")[0];
+
+var len = arr_img.length;
+
+var index = 0;
+
+//chay tu dong
+function set() {
+  return setInterval(() => {
+    if (index == len - 1) {
+      index = 0;
+    } else {
+      index++;
+    }
+
+    img.src = arr_img[index];
+  }, 2000);
+}
+
+// luc nao cung chay
+var intevalId = set();
+
+first.onclick = function () {
+  // huy chay tu dong
+  clearInterval(intevalId);
+  index = 0;
+  img.src = arr_img[index];
+  //khoi tao chay tu dong
+  intevalId = set();
+};
+
+last.onclick = function () {
+  // huy chay tu dong
+  clearInterval(intevalId);
+  index = len - 1;
+  img.src = arr_img[index];
+  //khoi tao chay tu dong
+  intevalId = set();
+};
+
+stopp.onclick = function () {
+  // huy chay tu dong
+  clearInterval(intevalId);
+  intevalId = 0;
+};
+
+start.onclick = function () {
+  //khoi tao chay tu dong
+  if (intevalId == 0) {
+    intevalId = set();
+  }
+};
+
+next.onclick = function () {
+  //huy chay tu dong
+  clearTimeout(intevalId);
+  if (index == len - 1) {
+    index = 0;
+  } else {
+    index++;
+  }
+  img.src = arr_img[index];
+  //khoi tao chay tu dong
+  intevalId = set();
+};
+
+prev.onclick = function () {
+  //huy chay tu dong
+  clearTimeout(intevalId);
+  if (index == 0) {
+    index = len - 1;
+  } else {
+    index--;
+  }
+  img.src = arr_img[index];
+  //khoi tao chay tu dong
+  intevalId = set();
+};
