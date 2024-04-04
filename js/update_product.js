@@ -31,6 +31,7 @@ var input_price = form.price;
 input_name.value = product["name"];
 input_price.value = product["price"];
 
+var err = [];
 form.onsubmit = function (e) {
   e.preventDefault();
 
@@ -41,24 +42,6 @@ form.onsubmit = function (e) {
   var err_name = document.getElementsByClassName("err_name")[0];
   var err_price = document.getElementsByClassName("err_price")[0];
 
-  if (name.length == 0) {
-    // alert("ten khong duoc de trong");
-    err_name.setAttribute("style", "display:block;color:red");
-    err_name.innerText = "ten khong duoc de trong";
-  } else if (name.length <= 3) {
-    console.log(2);
-    // alert("ten khong duoc de trong");
-    // console.log(err_name);
-    err_name.setAttribute("style", "display:block;color:red");
-    err_name.innerText = "ten khong duoc it hon 3 ki tu";
-    // console.log("22222222");
-  }
-  //   else if (price.length == 0) {
-  //     // alert("gia khong duoc de trong");
-  //     err_price.setAttribute("style", "display:block;color:red");
-  //     err_price.innerText = "gia khong duoc de trong";
-  //   }
-
   if (name.length > 0) {
     err_name.setAttribute("style", "display:none");
     err_name.innerText = "";
@@ -67,5 +50,24 @@ form.onsubmit = function (e) {
   if (price.length > 0) {
     err_price.setAttribute("style", "display:none");
     err_price.innerText = "";
+  }
+
+  if (name.length == 0) {
+    // alert("ten khong duoc de trong");
+    err_name.setAttribute("style", "display:block;color:red");
+    err_name.innerText = "ten khong duoc de trong";
+    err["name_err"] = "ten khong duoc de trong";
+  } else if (name.length < 3) {
+    console.log(2);
+    // alert("ten khong duoc de trong");
+    // console.log(err_name);
+    err_name.setAttribute("style", "display:block;color:red");
+    err_name.innerText = "ten khong duoc it hon 3 ki tu";
+    err["name_err"] = "ten khong it hon 3 ki tu";
+    // console.log("22222222");
+  } else if (price.length == 0) {
+    // alert("gia khong duoc de trong");
+    err_price.setAttribute("style", "display:block;color:red");
+    err_price.innerText = "gia khong duoc de trong";
   }
 };
